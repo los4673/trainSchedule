@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Train Schedule</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color: #784932;">
+            <h1 class="text-center">Train Schedule</h1>
+            <h3 class="text-center">Hop on the train!!</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Train Schedule-->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h6 class="card-title">Current Train Schedule</h6>
+                        <table class="table table-sm table-hover" id="train-schedule">
+                            <thread>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">First Train(Military Time)</th>
+                                    <th scope="col">Frequency(min)</th>
+                                </tr>
+                            </thread>
+                            <tbody id="trainList">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <!--Add new train-->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h6 class="card-title">Add new train</h6>
+                        <form>
+                            <div class="form-group row">
+                                <label for="name-input">Train Name</label>
+                                <input class="form-control" id="name-input" placeholder="Train Name" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="name-input">Destination</label>
+                                <input class="form-control" id="destination-Input" placeholder="Destination" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="name-input">First Train Time(HH:mm - military time)</label>
+                                <input class="form-control" id="first-input" placeholder="First Train Time" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="name-input">Frequency (min)</label>
+                                <input class="form-control" id="frequency-input" placeholder="Frequency" type="text">
+                            </div>
+                            <input type="submit" id="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
